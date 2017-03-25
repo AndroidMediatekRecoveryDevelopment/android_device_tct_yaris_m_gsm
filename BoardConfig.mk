@@ -44,7 +44,7 @@ DEVICE_SCREEN_HEIGHT := 800
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-#RECOVERY_VARIANT := twrp
+RECOVERY_VARIANT := twrp
 #RECOVERY_VARIANT := philz
 #RECOVERY_VARIANT := carliv
 
@@ -76,6 +76,7 @@ endif
 
 # TWRP
 ifeq ($(RECOVERY_VARIANT),twrp)
+TARGET_RECOVERY_FSTAB := device/tct/yaris_m_gsm/recovery/twrp.fstab
 TW_NO_EXFAT := true
 TWHAVE_SELINUX := true
 TW_THEME := portrait_mdpi
@@ -83,7 +84,7 @@ TW_NO_EXFAT_FUSE := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/mt_usb/musb-hdrc.0/gadget/lun%d/file"
 TW_EXCLUDE_SUPERSU := true
-TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
+TARGET_RECOVERY_PIXEL_FORMAT := "BRGA_8888"
 DEVICE_RESOLUTION := 480x800
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255

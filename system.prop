@@ -1,0 +1,7 @@
+#
+# system.prop for yaris_m_gsm
+#
+
+ro.cwm.backup_partitions=/custpack,/mobile_info
+ro.cwm.forbid_format=/custpack,/mobile_info
+ro.cwm.forbid_mount=/custpack,/mobile_info
